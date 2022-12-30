@@ -978,6 +978,9 @@ export namespace JSX {
     colSpan?: FunctionMaybe<number | string>;
     rowSpan?: FunctionMaybe<number | string>;
   }
+  interface TemplateHTMLAttributes<T extends HTMLTemplateElement> extends HTMLAttributes<T> {
+    content?: FunctionMaybe<DocumentFragment>;
+  }
   interface TextareaHTMLAttributes<T> extends HTMLAttributes<T> {
     autocomplete?: FunctionMaybe<string>;
     autofocus?: FunctionMaybe<boolean>;
@@ -1826,7 +1829,10 @@ export namespace JSX {
       ZoomAndPanSVGAttributes {
     viewTarget?: FunctionMaybe<string>;
   }
-  interface IntrinsicElements {
+  /**
+   * @type {HTMLElementTagNameMap}
+   */
+  interface HTMLElementTags {
     a: AnchorHTMLAttributes<HTMLAnchorElement>;
     abbr: HTMLAttributes<HTMLElement>;
     address: HTMLAttributes<HTMLElement>;
@@ -1838,7 +1844,6 @@ export namespace JSX {
     base: BaseHTMLAttributes<HTMLBaseElement>;
     bdi: HTMLAttributes<HTMLElement>;
     bdo: HTMLAttributes<HTMLElement>;
-    big: HTMLAttributes<HTMLElement>;
     blockquote: BlockquoteHTMLAttributes<HTMLElement>;
     body: HTMLAttributes<HTMLBodyElement>;
     br: HTMLAttributes<HTMLBRElement>;
@@ -1883,7 +1888,6 @@ export namespace JSX {
     input: InputHTMLAttributes<HTMLInputElement>;
     ins: InsHTMLAttributes<HTMLModElement>;
     kbd: HTMLAttributes<HTMLElement>;
-    keygen: KeygenHTMLAttributes<HTMLElement>;
     label: LabelHTMLAttributes<HTMLLabelElement>;
     legend: HTMLAttributes<HTMLLegendElement>;
     li: LiHTMLAttributes<HTMLLIElement>;
@@ -1892,11 +1896,9 @@ export namespace JSX {
     map: MapHTMLAttributes<HTMLMapElement>;
     mark: HTMLAttributes<HTMLElement>;
     menu: MenuHTMLAttributes<HTMLElement>;
-    menuitem: HTMLAttributes<HTMLElement>;
     meta: MetaHTMLAttributes<HTMLMetaElement>;
     meter: MeterHTMLAttributes<HTMLElement>;
     nav: HTMLAttributes<HTMLElement>;
-    noindex: HTMLAttributes<HTMLElement>;
     noscript: HTMLAttributes<HTMLElement>;
     object: ObjectHTMLAttributes<HTMLObjectElement>;
     ol: OlHTMLAttributes<HTMLOListElement>;
@@ -1904,7 +1906,6 @@ export namespace JSX {
     option: OptionHTMLAttributes<HTMLOptionElement>;
     output: OutputHTMLAttributes<HTMLElement>;
     p: HTMLAttributes<HTMLParagraphElement>;
-    param: ParamHTMLAttributes<HTMLParamElement>;
     picture: HTMLAttributes<HTMLElement>;
     pre: HTMLAttributes<HTMLPreElement>;
     progress: ProgressHTMLAttributes<HTMLProgressElement>;
@@ -1928,10 +1929,11 @@ export namespace JSX {
     sup: HTMLAttributes<HTMLElement>;
     table: HTMLAttributes<HTMLTableElement>;
     tbody: HTMLAttributes<HTMLTableSectionElement>;
-    td: TdHTMLAttributes<HTMLTableDataCellElement>;
+    td: TdHTMLAttributes<HTMLTableCellElement>;
+    template: TemplateHTMLAttributes<HTMLTemplateElement>;
     textarea: TextareaHTMLAttributes<HTMLTextAreaElement>;
     tfoot: HTMLAttributes<HTMLTableSectionElement>;
-    th: ThHTMLAttributes<HTMLTableHeaderCellElement>;
+    th: ThHTMLAttributes<HTMLTableCellElement>;
     thead: HTMLAttributes<HTMLTableSectionElement>;
     time: TimeHTMLAttributes<HTMLElement>;
     title: HTMLAttributes<HTMLTitleElement>;
@@ -1942,7 +1944,21 @@ export namespace JSX {
     var: HTMLAttributes<HTMLElement>;
     video: VideoHTMLAttributes<HTMLVideoElement>;
     wbr: HTMLAttributes<HTMLElement>;
-    svg: SvgSVGAttributes<SVGSVGElement>;
+  }
+  /**
+   * @type {HTMLElementDeprecatedTagNameMap}
+   */
+  interface HTMLElementDeprecatedTags {
+    big: HTMLAttributes<HTMLElement>;
+    keygen: KeygenHTMLAttributes<HTMLElement>;
+    menuitem: HTMLAttributes<HTMLElement>;
+    noindex: HTMLAttributes<HTMLElement>;
+    param: ParamHTMLAttributes<HTMLParamElement>;
+  }
+  /**
+   * @type {SVGElementTagNameMap}
+   */
+  interface SVGElementTags {
     animate: AnimateSVGAttributes<SVGAnimateElement>;
     animateMotion: AnimateMotionSVGAttributes<SVGAnimateMotionElement>;
     animateTransform: AnimateTransformSVGAttributes<SVGAnimateTransformElement>;
@@ -1959,6 +1975,7 @@ export namespace JSX {
     feDiffuseLighting: FeDiffuseLightingSVGAttributes<SVGFEDiffuseLightingElement>;
     feDisplacementMap: FeDisplacementMapSVGAttributes<SVGFEDisplacementMapElement>;
     feDistantLight: FeDistantLightSVGAttributes<SVGFEDistantLightElement>;
+    feDropShadow: Partial<SVGFEDropShadowElement>;
     feFlood: FeFloodSVGAttributes<SVGFEFloodElement>;
     feFuncA: FeFuncSVGAttributes<SVGFEFuncAElement>;
     feFuncB: FeFuncSVGAttributes<SVGFEFuncBElement>;
@@ -1984,13 +2001,16 @@ export namespace JSX {
     marker: MarkerSVGAttributes<SVGMarkerElement>;
     mask: MaskSVGAttributes<SVGMaskElement>;
     metadata: MetadataSVGAttributes<SVGMetadataElement>;
+    mpath: Partial<SVGMPathElement>;
     path: PathSVGAttributes<SVGPathElement>;
     pattern: PatternSVGAttributes<SVGPatternElement>;
     polygon: PolygonSVGAttributes<SVGPolygonElement>;
     polyline: PolylineSVGAttributes<SVGPolylineElement>;
     radialGradient: RadialGradientSVGAttributes<SVGRadialGradientElement>;
     rect: RectSVGAttributes<SVGRectElement>;
+    set: Partial<SVGSetElement>;
     stop: StopSVGAttributes<SVGStopElement>;
+    svg: SvgSVGAttributes<SVGSVGElement>;
     switch: SwitchSVGAttributes<SVGSwitchElement>;
     symbol: SymbolSVGAttributes<SVGSymbolElement>;
     text: TextSVGAttributes<SVGTextElement>;
@@ -1999,4 +2019,5 @@ export namespace JSX {
     use: UseSVGAttributes<SVGUseElement>;
     view: ViewSVGAttributes<SVGViewElement>;
   }
+  interface IntrinsicElements extends HTMLElementTags, HTMLElementDeprecatedTags, SVGElementTags {}
 }
