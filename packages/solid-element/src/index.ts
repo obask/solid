@@ -8,10 +8,11 @@ import {
 } from "component-register";
 export { hot, getCurrentElement, noShadowDOM } from "component-register";
 export type ComponentType<T> = mComponentType<T>;
-import { createRoot, createSignal } from "solid-js";
-import { insert } from "solid-js/web";
+import { createRoot, createSignal } from "xolid";
+import { insert } from "xolid/web";
 
 function createProps<T>(raw: T) {
+  // @ts-ignore
   const keys = Object.keys(raw) as (keyof T)[];
   const props = {};
   for (let i = 0; i < keys.length; i++) {

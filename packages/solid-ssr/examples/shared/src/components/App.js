@@ -1,5 +1,5 @@
-import { useContext, lazy, ErrorBoundary } from "solid-js";
-import { HydrationScript } from "solid-js/web";
+import { useContext, lazy, ErrorBoundary } from "xolid";
+import { HydrationScript } from "xolid/web";
 import { Link, RouteHOC, RouterContext } from "../router";
 // import stub as main package to allowing fetch as you load
 import Profile from "./Profile";

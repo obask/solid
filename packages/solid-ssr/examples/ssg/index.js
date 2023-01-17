@@ -1,4 +1,4 @@
-import { renderToStringAsync } from "solid-js/web";
+import { renderToStringAsync } from "xolid/web";
 import App from "../shared/src/components/App";
 
 // entry point for server render

@@ -1,2 +1,9 @@
 packages:
-  - 'packages/*'
+  # all packages in subdirs of packages/ and examples/
+  - 'packages/**'
+
+
+options:
+  prefer-workspace-packages: true
+  strict-peer-dependencies: false
+

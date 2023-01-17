@@ -1,4 +1,4 @@
-import { createResource, lazy } from "solid-js";
+import { createResource, lazy } from "xolid";
 const Profile = lazy(() => import("./Profile"));
 
 // this component lazy loads data and code in parallel

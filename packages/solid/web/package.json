@@ -7,7 +7,7 @@
     "./dist/server.js": "./dist/web.js"
   },
   "unpkg": "./dist/web.cjs",
-  "types": "./types/index.d.ts",
+  "types": "./src/index.ts",
   "type": "module",
   "sideEffects": false,
   "exports": {

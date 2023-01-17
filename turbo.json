@@ -5,16 +5,13 @@
       "dependsOn": ["^build"],
       "outputMode": "new-only"
     },
-    "solid-js#build": {
+    "xolid#build": {
       "outputs": ["dist/**", "**/dist/**"]
     },
-    "solid-js#link": {
+    "xolid#link": {
       "outputs": []
     },
-    "solid-element#build": {
-      "dependsOn": ["xolid#types", "xolid#link"]
-    },
-    "solid-js#types": {
+    "xolid#types": {
       "dependsOn": ["^types"],
       "outputs": ["types/**", "**/types/**"]
     },
@@ -27,7 +24,7 @@
     "test-integration#test": {
       "dependsOn": ["xolid#build", "xolid#link"]
     },
-    "solid-js#test-types": {
+    "xolid#test-types": {
       "outputs": [],
       "dependsOn": ["types"]
     }

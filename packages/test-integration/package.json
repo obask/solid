@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "babel-preset-solid": "workspace:*",
-    "solid-js": "workspace:*"
+    "xolid": "workspace:*"
   },
   "devDependencies": {
     "gitly": "^2.2.1",

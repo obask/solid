@@ -13,7 +13,7 @@ export default [
       }
     ],
     preserveEntrySignatures: false,
-    external: ["solid-js", "solid-js/web", "path", "express"],
+    external: ["xolid", "xolid/web", "path", "express"],
     plugins: [
       nodeResolve({ preferBuiltins: true, exportConditions: ["solid", "node"] }),
       babel({

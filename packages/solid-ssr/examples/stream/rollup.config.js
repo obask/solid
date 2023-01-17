@@ -13,7 +13,7 @@ export default [
         format: "cjs"
       }
     ],
-    external: ["solid-js", "solid-js/web", "path", "express", "stream"],
+    external: ["xolid", "xolid/web", "path", "express", "stream"],
     plugins: [
       nodeResolve({ preferBuiltins: true, exportConditions: ["solid", "node"] }),
       babel({

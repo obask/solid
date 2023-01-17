@@ -37,6 +37,6 @@
     "express": "^4.17.1",
     "rollup": "^2.75.5",
     "rollup-plugin-copy": "^3.4.0",
-    "solid-js": "workspace:*"
+    "xolid": "workspace:*"
   }
 }

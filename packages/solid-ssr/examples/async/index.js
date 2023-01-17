@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 
-import { renderToStringAsync } from "solid-js/web";
+import { renderToStringAsync } from "xolid/web";
 import App from "../shared/src/components/App";
 
 const app = express();

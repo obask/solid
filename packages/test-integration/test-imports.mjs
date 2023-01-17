@@ -20,23 +20,23 @@ function checkError(error) {
   // identifier when running in node vs browser).  SO we silence them by not
   // re-throwing them here as we don't want to fail the test in those cases,
   // because we're testing only that ESM exports are set up correctly.
-  // Importing `solid-js/h` will fail in node even if modules are resolved
+  // Importing `xolid/h` will fail in node even if modules are resolved
   // properly, for example.
 }
 
 Promise.all([
-  import("solid-js").catch(checkError),
-  import("solid-js/dist/solid.js").catch(checkError),
+  import("xolid").catch(checkError),
+  import("xolid/dist/solid.js").catch(checkError),
 
-  import("solid-js/web").catch(checkError),
-  import("solid-js/web/dist/web.js").catch(checkError),
-  import("solid-js/web/dist/server.js").catch(checkError),
+  import("xolid/web").catch(checkError),
+  import("xolid/web/dist/web.js").catch(checkError),
+  import("xolid/web/dist/server.js").catch(checkError),
 
-  import("solid-js/h").catch(checkError),
-  import("solid-js/h/dist/h.js").catch(checkError),
+  import("xolid/h").catch(checkError),
+  import("xolid/h/dist/h.js").catch(checkError),
 
-  import("solid-js/html").catch(checkError),
-  import("solid-js/html/dist/html.js").catch(checkError)
+  import("xolid/html").catch(checkError),
+  import("xolid/html/dist/html.js").catch(checkError)
 ])
   .then(() => {
     console.log("ES Module import test passed.");

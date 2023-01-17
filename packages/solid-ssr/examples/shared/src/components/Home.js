@@ -1,4 +1,4 @@
-import { createSignal, onCleanup, onMount } from "solid-js";
+import { createSignal, onCleanup, onMount } from "xolid";
 const Home = () => {
   const [s, set] = createSignal(0);
   onMount(() => {

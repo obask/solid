@@ -1,5 +1,5 @@
 {
-  "name": "xolid",
+  "name": "xolid-monorepo",
   "description": "A declarative JavaScript library for building user interfaces.",
   "version": "1.0.0",
   "author": "Ryan Carniato",

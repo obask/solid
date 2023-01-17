@@ -16,3 +16,5 @@ packages/solid/universal/src/universal.d.ts
 # vscode devcontainers see issues #419 and #421 for context
 /.devcontainer.json
 /devcontainer
+pnpm-lock.yaml
+

@@ -1,4 +1,4 @@
-import { createUniqueId, createSignal } from "solid-js";
+import { createUniqueId, createSignal } from "xolid";
 
 const Settings = () => {
   const [text, setText] = createSignal("Hi");

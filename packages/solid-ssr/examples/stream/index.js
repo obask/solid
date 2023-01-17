@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 
-import { renderToStream } from "solid-js/web";
+import { renderToStream } from "xolid/web";
 import App from "../shared/src/components/App";
 
 const app = express();

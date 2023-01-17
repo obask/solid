@@ -6,7 +6,7 @@ module.exports = function (context, options = {}) {
       jsxTransform,
       Object.assign(
         {
-          moduleName: "solid-js/web",
+          moduleName: "xolid/web",
           builtIns: [
             "For",
             "Show",

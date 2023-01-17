@@ -1,5 +1,5 @@
-import { createSignal, createContext, useContext, useTransition } from "solid-js";
-import { isServer } from "solid-js/web";
+import { createSignal, createContext, useContext, useTransition } from "xolid";
+import { isServer } from "xolid/web";
 
 // Super simplistic pushstate router that matches on absolute paths
 const RouterContext = createContext();
