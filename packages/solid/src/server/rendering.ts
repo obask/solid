@@ -13,7 +13,7 @@ import {
   cleanNode,
   BRANCH
 } from "./reactive.js";
-import type { JSX } from "../jsx.js";
+import type { JSX } from "../../jsx-runtime"
 
 export type Component<P = {}> = (props: P) => JSX.Element;
 export type VoidProps<P = {}> = P & { children?: never };

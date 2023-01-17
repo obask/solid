@@ -24,6 +24,7 @@
     "src/reactive",
     "src/render",
     "src/server",
+    "src/jsx-runtime",
     "dist",
     "store/dist",
     "store/src",
@@ -34,153 +35,30 @@
     "universal/dist",
     "universal/src",
     "universal/package.json",
-    "jsx-runtime.d.ts"
+    "src/jsx-runtime/index.ts"
   ],
   "exports": {
     ".": {
-      "worker": {
-        "import": {
-          "types": "./src/index.ts",
-          "default": "./dist/server.js"
-        },
-        "require": "./dist/server.cjs"
-      },
-      "browser": {
-        "development": {
-          "import": {
-            "types": "./src/index.ts",
-            "default": "./dist/dev.js"
-          },
-          "require": "./dist/dev.cjs"
-        },
-        "import": {
-          "types": "./src/index.ts",
-          "default": "./dist/solid.js"
-        },
-        "require": "./dist/solid.cjs"
-      },
-      "node": {
-        "import": {
-          "types": "./src/index.ts",
-          "default": "./dist/server.js"
-        },
-        "require": "./dist/server.cjs"
-      },
-      "development": {
-        "import": {
-          "types": "./src/index.ts",
-          "default": "./dist/dev.js"
-        },
-        "require": "./dist/dev.cjs"
-      },
       "import": {
         "types": "./src/index.ts",
         "default": "./dist/solid.js"
       },
       "require": "./dist/solid.cjs"
     },
-    "./dist/*": "./dist/*",
     "./store": {
-      "worker": {
-        "import": {
-          "types": "./store/src/index.ts",
-          "default": "./store/dist/server.js"
-        },
-        "require": "./store/dist/server.cjs"
-      },
-      "browser": {
-        "development": {
-          "import": {
-            "types": "./store/src/index.ts",
-            "default": "./store/dist/dev.js"
-          },
-          "require": "./store/dist/dev.cjs"
-        },
-        "import": {
-          "types": "./store/src/index.ts",
-          "default": "./store/dist/store.js"
-        },
-        "require": "./store/dist/store.cjs"
-      },
-      "node": {
-        "import": {
-          "types": "./store/src/index.ts",
-          "default": "./store/dist/server.js"
-        },
-        "require": "./store/dist/server.cjs"
-      },
-      "development": {
-        "import": {
-          "types": "./store/src/index.ts",
-          "default": "./store/dist/dev.js"
-        },
-        "require": "./store/dist/dev.cjs"
-      },
       "import": {
         "types": "./store/src/index.ts",
         "default": "./store/dist/store.js"
       },
       "require": "./store/dist/store.cjs"
     },
-    "./store/dist/*": "./store/dist/*",
     "./web": {
-      "worker": {
-        "import": {
-          "types": "./web/src/index.ts",
-          "default": "./web/dist/server.js"
-        },
-        "require": "./web/dist/server.cjs"
-      },
-      "browser": {
-        "development": {
-          "import": {
-            "types": "./web/src/index.ts",
-            "default": "./web/dist/dev.js"
-          },
-          "require": "./web/dist/dev.cjs"
-        },
-        "import": {
-          "types": "./web/src/index.ts",
-          "default": "./web/dist/web.js"
-        },
-        "require": "./web/dist/web.cjs"
-      },
-      "node": {
-        "import": {
-          "types": "./web/src/index.ts",
-          "default": "./web/dist/server.js"
-        },
-        "require": "./web/dist/server.cjs"
-      },
-      "development": {
-        "import": {
-          "types": "./web/src/index.ts",
-          "default": "./web/dist/dev.js"
-        },
-        "require": "./web/dist/dev.cjs"
-      },
       "import": {
         "types": "./web/src/index.ts",
         "default": "./web/src/index.ts"
       },
       "require": "./web/dist/web.cjs"
-    },
-    "./web/dist/*": "./web/dist/*",
-    "./universal": {
-      "development": {
-        "import": {
-          "types": "./universal/src/index.ts",
-          "default": "./universal/dist/dev.js"
-        },
-        "require": "./universal/dist/dev.cjs"
-      },
-      "import": {
-        "types": "./universal/src/index.ts",
-        "default": "./universal/dist/universal.js"
-      },
-      "require": "./universal/dist/universal.cjs"
-    },
-    "./universal/dist/*": "./universal/dist/*"
+    }
   },
   "scripts": {
     "build": "npm-run-all -nl build:*",
@@ -188,10 +66,10 @@
     "build:js": "rollup -c",
     "types": "npm-run-all -nl types:*",
     "types:clean": "rimraf types/ store/types/ web/types/",
-    "types:copy": "ncp ../../node_modules/dom-expressions/src/jsx.d.ts ./jsx-runtime.d.ts",
-    "types:src": "tsc --noEmit --project ./tsconfig.build.json",
-    "types:web": "tsc --noEmit --project ./web/tsconfig.build.json",
-    "types:store": "tsc --noEmit --project ./store/tsconfig.build.json",
+    "types:copy": "ncp ../../node_modules/dom-expressions/src/jsx.d.ts src/jsx-runtime/index.ts",
+    "types:src": "tsc --noEmit --project ./tsconfig.json",
+    "types:web": "tsc --noEmit --project ./web/tsconfig.json",
+    "types:store": "tsc --noEmit --project ./store/tsconfig.json",
     "types:universal": "tsc --noEmit --project ./universal/tsconfig.json",
     "bench": "node --allow-natives-syntax bench/bench.cjs",
     "link": "symlink-dir . node_modules/xolid",

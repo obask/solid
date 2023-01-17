@@ -11,7 +11,7 @@ import {
 } from "../reactive/signal.js";
 import { mapArray, indexArray } from "../reactive/array.js";
 import { sharedConfig } from "./hydration.js";
-import type { JSX } from "../jsx.js";
+import type { JSX } from "../../jsx-runtime"
 
 /**
  * creates a list elements from a list

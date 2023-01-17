@@ -5,6 +5,7 @@
 
 import { createContext, useContext } from "../../src";
 import { render, Show } from "../src";
+import type {JSX} from "xolid/jsx-runtime"
 
 describe("Testing Context", () => {
   const ThemeContext = createContext("light");

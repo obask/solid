@@ -13,7 +13,7 @@ import {
   $DEVCOMP,
   ComponentProps,
   ValidComponent,
-} from "xolid";
+} from "../../src";
 
 export * from "./client.js";
 
@@ -27,7 +27,7 @@ export {
   Index,
   ErrorBoundary,
   mergeProps
-} from "xolid";
+} from "../../src";
 
 export * from "./server-mock.js";
 export const isServer = false;

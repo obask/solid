@@ -12,7 +12,7 @@ import {
   getOwner
 } from "../reactive/signal.js";
 import { HydrationContext, setHydrateContext, sharedConfig } from "./hydration.js";
-import type { JSX } from "../jsx.js";
+import type { JSX } from "../../jsx-runtime"
 
 type SuspenseListContextType = {
   register: (inFallback: Accessor<boolean>) => Accessor<SuspenseListRegisteredState>;

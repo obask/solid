@@ -9,7 +9,7 @@ import {
   EffectFunction
 } from "../reactive/signal.js";
 import { sharedConfig, nextHydrateContext, setHydrateContext } from "./hydration.js";
-import type { JSX } from "../jsx.js";
+import type { JSX } from "../../jsx-runtime"
 
 let hydrationEnabled = false;
 export function enableHydration() {

@@ -2,7 +2,7 @@
 
 import { requestCallback, Task } from "./scheduler.js";
 import { setHydrateContext, sharedConfig } from "../render/hydration.js";
-import type { JSX } from "../jsx.js";
+import type { JSX } from "../../jsx-runtime"
 import type { FlowComponent, FlowProps } from "../render/index.js";
 
 export const equalFn = <T>(a: T, b: T) => a === b;

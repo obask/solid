@@ -1,6 +1,7 @@
 node_modules/
 dist/
 lib/
+packages/solid/.idea/
 .idea/
 .vscode/
 coverage/

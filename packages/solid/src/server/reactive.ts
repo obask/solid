@@ -1,4 +1,4 @@
-import type { JSX } from "../jsx.js";
+import type { JSX } from "../../jsx-runtime";
 
 export const equalFn = <T>(a: T, b: T) => a === b;
 export const $PROXY = Symbol("solid-proxy");

@@ -61,7 +61,7 @@ export * from "./reactive/scheduler.js";
 export * from "./reactive/array.js";
 export * from "./render/index.js";
 
-import type { JSX } from "./jsx.js";
+import type { JSX } from "../jsx-runtime"
 type JSXElement = JSX.Element;
 export type { JSXElement, JSX };
 

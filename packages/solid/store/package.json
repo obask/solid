@@ -1,13 +1,13 @@
 {
   "name": "xolid/store",
-  "main": "./dist/server.cjs",
-  "module": "./dist/server.js",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
   "browser": {
     "./dist/server.cjs": "./dist/store.cjs",
     "./dist/server.js": "./dist/store.js"
   },
   "unpkg": "./dist/store.cjs",
-  "types": "./types/index.d.ts",
+  "types": "./src/index.ts",
   "type": "module",
   "sideEffects": false,
   "exports": {

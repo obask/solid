@@ -1,5 +1,5 @@
 import { createRoot, createSignal, createMemo, batch, createEffect } from "../../src";
-import { Accessor, Setter } from "../../types";
+import type { Accessor, Setter } from "xolid";
 import { createMutable, unwrap, $RAW } from "../src";
 
 describe("State Mutablity", () => {

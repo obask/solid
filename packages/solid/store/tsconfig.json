@@ -1,4 +1,11 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./types",
+    "paths": {
+      "xolid": ["../src"],
+      "xolid/jsx-runtime": ["../jsx-runtime.d.ts"],
+    }
+  },
   "include": ["./src", "./test"]
 }
