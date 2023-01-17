@@ -4,8 +4,8 @@
     "outDir": "./types",
     "baseUrl": "src",
     "paths": {
-      "solid-js/web": ["../../web"],
-      "solid-js": ["../.."]
+      "xolid/web": ["../../web"],
+      "xolid": ["../.."]
     }
   },
   "include": ["./src"]

@@ -12,7 +12,7 @@
       "outputs": []
     },
     "solid-element#build": {
-      "dependsOn": ["solid-js#types", "solid-js#link"]
+      "dependsOn": ["xolid#types", "xolid#link"]
     },
     "solid-js#types": {
       "dependsOn": ["^types"],
@@ -25,7 +25,7 @@
       "outputs": []
     },
     "test-integration#test": {
-      "dependsOn": ["solid-js#build", "solid-js#link"]
+      "dependsOn": ["xolid#build", "xolid#link"]
     },
     "solid-js#test-types": {
       "outputs": [],

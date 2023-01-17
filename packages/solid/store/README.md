@@ -9,7 +9,7 @@ For full documentation, check out the [website](https://www.solidjs.com/docs/lat
 ## Example
 
 ```js
-import { createStore } from "solid-js/store";
+import { createStore } from "xolid/store";
 
 const [store, setStore] = createStore({
   user: {

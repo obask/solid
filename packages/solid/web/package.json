@@ -1,5 +1,5 @@
 {
-  "name": "solid-js/web",
+  "name": "xolid/web",
   "main": "./dist/server.cjs",
   "module": "./dist/server.js",
   "browser": {

@@ -20,9 +20,9 @@ This is the least efficient way to use Solid as it requires a slightly larger ru
 ## Example
 
 ```js
-import { render } from "solid-js/web";
-import h from "solid-js/h";
-import { createSignal } from "solid-js";
+import { render } from "xolid/web";
+import h from "xolid/h";
+import { createSignal } from "xolid";
 
 function Button(props) {
   return h("button.btn-primary", props)
@@ -59,7 +59,7 @@ h("div", { id: () => props.id }, () => firstName() + lastName())
 <div class={selectedClass()} {...props} />
 
 // hyperscript
-import { mergeProps } from "solid-js"
+import { mergeProps } from "xolid"
 
 h("div", mergeProps({ class: selectedClass }, props))
 ```

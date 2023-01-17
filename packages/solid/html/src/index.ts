@@ -20,7 +20,7 @@ import {
   DelegatedEvents,
   SVGElements,
   SVGNamespace
-} from "solid-js/web";
+} from "xolid/web";
 
 export default createHTML({
   effect,

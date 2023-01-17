@@ -1,5 +1,5 @@
 {
-  "name": "solid-js/html",
+  "name": "xolid/html",
   "main": "./dist/html.cjs",
   "module": "./dist/html.js",
   "types": "./types/index.d.ts",

@@ -19,11 +19,11 @@ To use a custom renderer available in the (fictional) `solid-custom-dom` package
 }
 ```
 
-To create a custom renderer you must implement certain methods and export (as named exports) the results. You may also want to forward `solid-js` control flow to allow them to be auto imported as well.
+To create a custom renderer you must implement certain methods and export (as named exports) the results. You may also want to forward `xolid` control flow to allow them to be auto imported as well.
 
 ```js
 // example custom dom renderer
-import { createRenderer } from "solid-js/universal";
+import { createRenderer } from "xolid/universal";
 
 const PROPERTIES = new Set(["className", "textContent"]);
 
@@ -85,7 +85,7 @@ export {
   Match,
   Index,
   ErrorBoundary
-} from "solid-js";
+} from "xolid";
 ```
 
 Then to consume:

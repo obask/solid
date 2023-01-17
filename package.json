@@ -1,5 +1,5 @@
 {
-  "name": "solid-js",
+  "name": "xolid",
   "description": "A declarative JavaScript library for building user interfaces.",
   "version": "1.0.0",
   "author": "Ryan Carniato",
@@ -36,7 +36,7 @@
     "babel-plugin-jsx-dom-expressions": "^0.35.13",
     "coveralls": "^3.1.1",
     "csstype": "^3.1.0",
-    "dom-expressions": "0.35.13",
+    "dom-expressions": "^0.35.13",
     "fast-glob": "^3.2.11",
     "hyper-dom-expressions": "0.35.13",
     "jest": "^28.1.3",

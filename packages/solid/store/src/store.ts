@@ -1,4 +1,4 @@
-import { getListener, batch, DEV, $PROXY, $TRACK, createSignal } from "solid-js";
+import { getListener, batch, DEV, $PROXY, $TRACK, createSignal } from "xolid";
 
 export const $RAW = Symbol("store-raw"),
   $NODE = Symbol("store-node"),

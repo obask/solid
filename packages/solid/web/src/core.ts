@@ -8,4 +8,4 @@ export {
   sharedConfig,
   untrack,
   mergeProps
-} from "solid-js";
+} from "xolid";

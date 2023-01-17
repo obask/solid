@@ -1,5 +1,5 @@
 {
-  "name": "solid-js/universal",
+  "name": "xolid/universal",
   "main": "./dist/universal.cjs",
   "module": "./dist/universal.js",
   "types": "./types/index.d.ts",

@@ -1,11 +1,11 @@
 /**
- * @jsxImportSource solid-js
+ * @jsxImportSource xolid
  * @jest-environment jsdom
  */
 
 import { createRoot, createSignal, createUniqueId, JSX, children } from "../../src";
 
-declare module "solid-js/jsx-runtime" {
+declare module "xolid/jsx-runtime" {
   namespace JSX {
     interface Directives {
       getRef: boolean;

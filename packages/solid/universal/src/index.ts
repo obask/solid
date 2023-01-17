@@ -1,6 +1,6 @@
 import { createRenderer as createRendererDX } from "./universal.js";
 import type { RendererOptions, Renderer } from "./universal.js";
-import { mergeProps } from "solid-js";
+import { mergeProps } from "xolid";
 
 export function createRenderer<NodeType>(options: RendererOptions<NodeType>): Renderer<NodeType> {
   const renderer = createRendererDX(options);

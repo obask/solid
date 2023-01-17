@@ -1,5 +1,5 @@
 {
-  "name": "solid-js/h/jsx-runtime",
+  "name": "xolid/h/jsx-runtime",
   "main": "./dist/jsx.cjs",
   "module": "./dist/jsx.js",
   "types": "./types/index.d.ts",

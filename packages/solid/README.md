@@ -5,8 +5,8 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/solidjs/solid/main-ci.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/solidjs/solid/actions/workflows/main-ci.yml)
 [![Coverage Status](https://img.shields.io/coveralls/github/solidjs/solid.svg?style=for-the-badge)](https://coveralls.io/github/solidjs/solid?branch=main)
 
-[![NPM Version](https://img.shields.io/npm/v/solid-js.svg?style=for-the-badge)](https://www.npmjs.com/package/solid-js)
-[![](https://img.shields.io/npm/dm/solid-js.svg?style=for-the-badge)](https://www.npmjs.com/package/solid-js)
+[![NPM Version](https://img.shields.io/npm/v/xolid.svg?style=for-the-badge)](https://www.npmjs.com/package/xolid)
+[![](https://img.shields.io/npm/dm/xolid.svg?style=for-the-badge)](https://www.npmjs.com/package/xolid)
 [![Discord](https://img.shields.io/discord/722131463138705510?style=for-the-badge)](https://discord.com/invite/solidjs)
 [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/solidjs?style=for-the-badge)](https://www.reddit.com/r/solidjs/)
 
@@ -57,7 +57,7 @@ Or you can install the dependencies in your own setup. To use Solid with JSX (_r
 
 ```sh
 > npm i -D babel-preset-solid
-> npm i solid-js
+> npm i xolid
 ```
 
 The easiest way to get set up is to add `babel-preset-solid` to your `.babelrc`, babel config for webpack, or rollup configuration:
@@ -71,7 +71,7 @@ For TypeScript to work, remember to set your `.tsconfig` to handle Solid's JSX:
 ```js
 "compilerOptions": {
   "jsx": "preserve",
-  "jsxImportSource": "solid-js",
+  "jsxImportSource": "xolid",
 }
 ```
 
@@ -81,7 +81,7 @@ For TypeScript to work, remember to set your `.tsconfig` to handle Solid's JSX:
 
 ### Performant
 
-Meticulously engineered for performance and with half a decade of research behind it, Solid's performance is almost indistinguishable from optimized vanilla JavaScript (See Solid on the [JS Framework Benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html)). Solid is [small](https://bundlephobia.com/package/solid-js@1.3.15) and completely tree-shakable, and [fast](https://levelup.gitconnected.com/how-we-wrote-the-fastest-javascript-ui-framework-again-db097ddd99b6) when rendering on the server, too. Whether you're writing a fully client-rendered SPA or a server-rendered app, your users see it faster than ever. ([Read more about Solid's performance](https://dev.to/ryansolid/thinking-granular-how-is-solidjs-so-performant-4g37) from the library's creator.)
+Meticulously engineered for performance and with half a decade of research behind it, Solid's performance is almost indistinguishable from optimized vanilla JavaScript (See Solid on the [JS Framework Benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html)). Solid is [small](https://bundlephobia.com/package/xolid@1.3.15) and completely tree-shakable, and [fast](https://levelup.gitconnected.com/how-we-wrote-the-fastest-javascript-ui-framework-again-db097ddd99b6) when rendering on the server, too. Whether you're writing a fully client-rendered SPA or a server-rendered app, your users see it faster than ever. ([Read more about Solid's performance](https://dev.to/ryansolid/thinking-granular-how-is-solidjs-so-performant-4g37) from the library's creator.)
 
 ### Powerful
 
@@ -99,8 +99,8 @@ Solid is built on established tools like JSX and TypeScript and integrates with 
 <summary>Show Me!</summary>
 
 ```jsx
-import { render } from "solid-js/web";
-import { createSignal } from "solid-js";
+import { render } from "xolid/web";
+import { createSignal } from "xolid";
 
 // A component is just a function that (optionally) accepts properties and returns a DOM node
 const Counter = props => {
@@ -132,8 +132,8 @@ See it in action in our interactive [Playground](https://playground.solidjs.com/
 Solid compiles our JSX down to efficient real DOM expressions updates, still using the same reactive primitives (`createSignal`) at runtime but making sure there's as little rerendering as possible. Here's what that looks like in this example:
 
 ```js
-import { render, createComponent, delegateEvents, insert, template } from "solid-js/web";
-import { createSignal } from "solid-js";
+import { render, createComponent, delegateEvents, insert, template } from "xolid/web";
+import { createSignal } from "xolid";
 
 const _tmpl$ = /*#__PURE__*/ template(`<button type="button">Increment </button>`, 2);
 

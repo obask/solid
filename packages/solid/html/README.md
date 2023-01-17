@@ -20,9 +20,9 @@ Using `html` is slightly less efficient than JSX(but more than HyperScript), req
 ## Example
 
 ```js
-import { render } from "solid-js/web";
-import html from "solid-js/html";
-import { createSignal } from "solid-js";
+import { render } from "xolid/web";
+import html from "xolid/html";
+import { createSignal } from "xolid";
 
 function Button(props) {
   return html`<button class="btn-primary" ...${props} />`;

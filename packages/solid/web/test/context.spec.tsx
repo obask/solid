@@ -1,5 +1,5 @@
 /** 
- * @jsxImportSource solid-js
+ * @jsxImportSource xolid
  * @jest-environment jsdom
  */
 

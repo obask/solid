@@ -17,7 +17,7 @@ module.exports = {
                 replacement: path.join(__dirname, "../../packages/solid/web/src/core")
               },
               {
-                original: "^solid-js$",
+                original: "^xolid$",
                 replacement: path.join(__dirname, "src"),
               }
             ]

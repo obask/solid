@@ -1,5 +1,5 @@
 import { ssrElement } from "./server.js";
-import { splitProps, Component, JSX } from "solid-js";
+import { splitProps, Component, JSX } from "xolid";
 
 export * from "./server";
 
@@ -13,7 +13,7 @@ export {
   Index,
   ErrorBoundary,
   mergeProps
-} from "solid-js";
+} from "xolid";
 
 export const isServer = true;
 

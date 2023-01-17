@@ -92,7 +92,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins: [
       replace({
         '"_SOLID_DEV_"': false,
@@ -113,7 +113,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins
   },
   {
@@ -128,7 +128,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins
   },
   {
@@ -143,7 +143,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins: [
       replace({
         '"_DX_DEV_"': false,
@@ -164,7 +164,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js", "stream"],
+    external: ["xolid", "stream"],
     plugins
   },
   {
@@ -179,7 +179,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins
   },
   {
@@ -194,7 +194,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins: [
       replace({
         '"_DX_DEV_"': false,
@@ -215,7 +215,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js"],
+    external: ["xolid"],
     plugins
   },
   {
@@ -231,7 +231,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js/web"],
+    external: ["xolid/web"],
     plugins
   },
   {
@@ -247,7 +247,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js/web"],
+    external: ["xolid/web"],
     plugins
   },
   {
@@ -262,7 +262,7 @@ export default [
         format: "es"
       }
     ],
-    external: ["solid-js/h"],
+    external: ["xolid/h"],
     plugins
   }
 ];

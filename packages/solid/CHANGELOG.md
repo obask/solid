@@ -1,4 +1,4 @@
-# solid-js
+# xolid
 
 ## 1.6.9
 

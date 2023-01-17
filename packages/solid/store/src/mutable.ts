@@ -1,4 +1,4 @@
-import { batch, getListener, DEV, $PROXY, $TRACK } from "solid-js";
+import { batch, getListener, DEV, $PROXY, $TRACK } from "xolid";
 import {
   unwrap,
   isWrappable,
